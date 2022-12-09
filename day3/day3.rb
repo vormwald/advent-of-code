@@ -16,9 +16,25 @@ class Run
   end
 
   def part2
-    @input.inject(0) do |sum, row|
-      sum + score_line(row)
+    i = 0
+    letters = []
+
+    loop do
+      lines = take_three_lines_from(i)
+      common = lines[0].chars & lines[1].chars & lines[2].chars
+      letters.concat common
+
+      i += 3
+      break if i >= @input.length
     end
+
+    letters.inject(0) do |sum, common_letter|
+      sum + get_score(common_letter)
+    end
+  end
+
+  def take_three_lines_from(start)
+    @input[start, 3]
   end
 
   def load_file

@@ -19,10 +19,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   rake
   rspec
 
 BUNDLED WITH
-   2.3.19
+   2.3.7
