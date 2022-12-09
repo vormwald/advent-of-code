@@ -1,4 +1,4 @@
-class Run
+class Day3
   def initialize(input = nil)
     @input = input || load_file
     @scoring = ("a".."z").to_a + ("A".."Z").to_a

@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
-##
-require File.expand_path(ARGV[0].sub(/\.rb$/, ""))
+day = ARGV[0]
+require File.expand_path("day#{day}/day#{day}.rb")
+puts "Day#{day}"
+cons = const_get("Day#{day}")
+puts cons
 
 Run.new.call
